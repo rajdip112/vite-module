@@ -2,6 +2,7 @@
   "name": "vite-common-module",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -14,13 +15,32 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
+    "vite": "^4.4.11",
     "web-vitals": "^2.1.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajdip112/vite-module.git"
+  },
+  "files": [
+    "/dist"
+  ],
+  "main": "./dist/vite-common-module.umd",
+  "module": "./dist/vite-common-module.es",
+  "exports": {
+    ".": {
+      "import": "./dist/vite-common-module.es",
+      "require": "./dist/vite-common-module.umd"
+    }
+  },
   "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:liferay": "lnbs-build",
+    "deploy:liferay": "npm run build:liferay && lnbs-deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +59,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.4.11",
+    "liferay-npm-build-support": "^2.31.2",
+    "liferay-npm-bundler": "^2.31.2",
+    "liferay-npm-bundler-preset-create-react-app": "^2.31.2"
+  },
+  "portlet": {
+    "com.liferay.portlet.display-category": "category.vite-common-module",
+    "javax.portlet.name": "vitecommonmodule",
+    "javax.portlet.security-role-ref": "power-user,user",
+    "javax.portlet.resource-bundle": "content.Language",
+    "com.liferay.portlet.instanceable": true
   }
 }
