@@ -1,14 +1,9 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
-import Form from "../src/lib/Components/FormComponent/Form"
+import Form from "../src/lib/Components/FormComponent/Form";
 
 function App() {
-  return <>
-  Helo
-  </>
+  return <Form />;
 }
 
-export {
-  App,
-  Form
-};
+export default App;
