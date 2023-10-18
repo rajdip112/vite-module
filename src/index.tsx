@@ -19,4 +19,4 @@
 // reportWebVitals();
 import Form from "./lib/Components/FormComponent/Form";
 
-export {Form}
+export default {Form}
