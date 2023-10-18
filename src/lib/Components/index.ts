@@ -1,1 +1,1 @@
-export  * from './FormComponent'
+export * from './FormComponent'
