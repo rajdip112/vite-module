@@ -17,5 +17,6 @@
 // // to log results (for example: reportWebVitals(console.log))
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
+import Form from "./lib/Components/FormComponent/Form";
 
-export { default as FormComponent } from './lib/Components/FormComponent/Form'
+export {Form}
