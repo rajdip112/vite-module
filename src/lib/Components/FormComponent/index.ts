@@ -7,5 +7,6 @@ export  {
     RenderedPage,
     PagingLink,
   } from "../paging/PageProvider";
+export { RightArrowIcon , MusicIcon } from "../CustomIcon/SvgIcons"
   
   
