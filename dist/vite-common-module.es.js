@@ -640,7 +640,7 @@ const Cr = (s) => {
       loading: f,
       rows: l || [],
       columns: R,
-      style: { padding: "30px 16px 4px 16px" },
+      style: { padding: "30px 16px 4px 16px", margin: "12px 26px" },
       getRowId: (E) => E.id,
       slots: {
         toolbar: T ? g : null

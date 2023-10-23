@@ -6,7 +6,7 @@ import {
   GridToolbarFilterButton,
   GridToolbarDensitySelector,
 } from "@mui/x-data-grid-pro";
-
+import "../index.css"
 interface FormProps {
   data: any[];
   columns?: any;
@@ -35,7 +35,7 @@ const Form: React.FC<FormProps> = (props) => {
         loading={loading}
         rows={data ? data : []}
         columns={columns}
-        style={{ padding: "30px 16px 4px 16px" }}
+        style={{ padding: "30px 16px 4px 16px", margin: "12px 26px" }}
         getRowId={(row: any) => row.id}
         slots={{
           toolbar: CustomToolbar ? Toolbar : null,
