@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { PageContext } from "../paging";
+import { PageContext } from "../paging/PageProvider";
 
 const usePage = () => {
   const { activePage, goToPage, allPages, pageId } = useContext(PageContext);
